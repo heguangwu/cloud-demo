@@ -1,0 +1,8 @@
+spring:
+  data:
+    redis:
+      cluster:
+        nodes: localhost:6379
+      jedis:
+        pool:
+          enabled: true

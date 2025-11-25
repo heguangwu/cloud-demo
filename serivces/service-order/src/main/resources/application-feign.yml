@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    openfeign:
+      client:
+        config:
+          # 超时配置，默认
+          default:
+            connect-timeout: 10000
+            read-timeout: 60000
+          # 指定服务超时配置
+          service-product:
+            connect-timeout: 3000
+            read-timeout: 2000
+            # 配置该服务的拦截器
+            request-interceptors:
+              - com.meetyou.order.interceptor.TokenRequestInterceptor
+
+feign:
+  sentinel:
+    enabled: true

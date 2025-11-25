@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: service-order
+  profiles:
+    active: prod
+    include: feign
+  cloud:
+    nacos:
+      # 注册中心地址
+      server-addr: 172.31.16.64:8848
+      # 配置中心地址
+      config:
+        server-addr: 172.31.16.64:8848
+        username: meetyou
+        password: meetyou123
+        namespace: ${spring.profiles.active:dev}
+
+server:
+  port: 8001
+
+
+logging:
+  level:
+    com.alibaba.cloud.nacos.config: DEBUG
+    com.alibaba.nacos.client.config: DEBUG
+    # 开启 feign 请求日志，也可以精确到具体类，还需要在配置类中进行配置
+    com.meetyou.order.feign: debug
+debug: true
+
+# 开发环境配置文件
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+    # nacos 上的配置文件名
+    import:
+      - nacos:service-order.yml?refreshEnabled=true&group=order
+
+# 生产环境配置文件
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+    import:
+      - nacos:service-order.yml?refreshEnabled=true&group=order
+      - nacos:order-database.yml?refreshEnabled=true&group=order

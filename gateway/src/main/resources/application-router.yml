@@ -1,0 +1,46 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: order-route
+              uri: lb://service-order
+              predicates:
+                - Path=/api/order/**
+              filters:
+                # 请求消息路径重写：https://docs.spring.io/spring-cloud-gateway/reference/4.3/spring-cloud-gateway-server-webflux.html
+                - RewritePath=/api/order/?(?<segment>.*), /order/$\{segment}
+                - AddResponseHeader=X-Response-Uid, Hgw00114433-1
+                - CustomToken=X-Custom-Token, jwt
+            - id: product-route
+              uri: lb://service-product
+              predicates:
+                - Path=/api/product/**
+              filters:
+                - RewritePath=/api/product/?(?<segment>.*), /product/$\{segment}
+            - id: default-route
+              uri: https://www.bing.com
+              # predicates的多个规则需要同时满足
+              # Path 对应的类是 PathRoutePredicateFactory
+              # 该规则只匹配：https://gateway/search?q=hehe&user=hgw 映射到 https://www.bing.com/search?q=hehe&user=hg
+              predicates:
+                - name: Path
+                  args:
+                    patterns: /search
+                - name: Query
+                  args:
+                    param: q
+                    regexp: hehe
+                # 自定义断言 MyRoutePredicateFactory
+                # 短写法
+                - My=user,hgw
+                # 长写法
+#                - name: My
+#                  args:
+#                    param: user
+#                    value: hgw
+              order: 100
+          # 默认 filter 处理
+          default-filters:
+            - AddResponseHeader=X-Response-System, Windows11

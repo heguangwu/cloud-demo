@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      server-addr: 172.31.16.64:8848
+  profiles:
+    include:
+      - router
+      - db
+server:
+  port: 80

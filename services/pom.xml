@@ -15,7 +15,7 @@
         <module>service-order</module>
     </modules>
 
-    <artifactId>serivces</artifactId>
+    <artifactId>services</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

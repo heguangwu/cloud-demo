@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: system
+  # 数据库相关配置
+  datasource:
+    url: jdbc:mysql://172.31.16.64/mydb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: test
+    password: test123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# mybatis调试日志设置，打印执行SQL
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+  global-config:
+    db-config:
+      # 逻辑删除配置项
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0

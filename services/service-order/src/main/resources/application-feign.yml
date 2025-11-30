@@ -13,7 +13,7 @@ spring:
             read-timeout: 2000
             # 配置该服务的拦截器
             request-interceptors:
-              - com.meetyou.order.interceptor.TokenRequestInterceptor
+              - cloud.heguangwu.order.interceptor.TokenRequestInterceptor
 
 feign:
   sentinel:

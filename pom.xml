@@ -28,7 +28,12 @@
         <spring.cloud.version>2025.0.0</spring.cloud.version>
         <spring.cloud.alibaba.version>2025.0.0.0</spring.cloud.alibaba.version>
         <mybatis-plus.version>3.5.14</mybatis-plus.version>
+        <mysql-jdbc.version>9.5.0</mysql-jdbc.version>
+        <hutool.version>5.8.41</hutool.version>
+        <byte-buddy-agent.version>1.17.8</byte-buddy-agent.version>
+        <jackson-databind.version>2.20.1</jackson-databind.version>
     </properties>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -60,6 +65,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- 将Mockito配置为Java Agent -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.4</version>
+                <configuration>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/net/bytebuddy/byte-buddy-agent/${byte-buddy-agent.version}/byte-buddy-agent-${byte-buddy-agent.version}.jar"
+                    </argLine>
+                </configuration>
             </plugin>
         </plugins>
     </build>

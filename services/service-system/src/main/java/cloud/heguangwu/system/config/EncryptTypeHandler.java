@@ -1,22 +1,20 @@
 package cloud.heguangwu.system.config;
 
 import com.baomidou.mybatisplus.core.toolkit.AES;
-import lombok.val;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.MappedJdbcTypes;
-import org.apache.ibatis.type.MappedTypes;
-import org.springframework.stereotype.Component;
-
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 //自定义字段类型加密处理
-@Component
+@Slf4j
+//@Component 加入该注解所有string参数都会进行加解密
 @MappedJdbcTypes(JdbcType.VARCHAR)
-@MappedTypes(String.class)
+//@MappedTypes(String.class) 加入该注解所有string参数都会进行加解密
 public class EncryptTypeHandler extends BaseTypeHandler<String> {
     private static final String ENCRYPT_KEY = "hello_1234@WORLD";
 
@@ -33,6 +31,7 @@ public class EncryptTypeHandler extends BaseTypeHandler<String> {
         if(password == null){
             return null;
         }
+        log.info("{}加密后的字符串：{}", columnName, password);
         return AES.decrypt(password, ENCRYPT_KEY);
     }
 

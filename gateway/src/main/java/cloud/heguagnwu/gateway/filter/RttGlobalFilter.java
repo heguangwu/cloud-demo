@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+
+//继承自 GlobalFilter 的是全局 filter 不需要在配置文件中进行配置
 @Slf4j
 @Component
 public class RttGlobalFilter implements GlobalFilter, Ordered {

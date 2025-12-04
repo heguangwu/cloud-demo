@@ -42,7 +42,7 @@ class MybatisPlusFormatTest {
     @Test
     void insertEncryptDate() {
         User user = new User();
-        user.setName("加密测试用户");
+        user.setName("test");
         user.setPassword("123456");
         assertEquals(1, userMapper.insert(user));
     }

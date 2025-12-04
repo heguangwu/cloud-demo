@@ -36,7 +36,12 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter-test</artifactId>
         </dependency>
-
+        <!-- 权限认证框架 -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot3-starter</artifactId>
+            <version>${sa-token.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

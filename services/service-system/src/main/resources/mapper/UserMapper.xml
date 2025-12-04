@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace必须对应Mapper接口的全类名 -->
+<mapper namespace="cloud.heguangwu.system.mapper.UserMapper">
+
+    <!-- 自定义SQL：根据姓名模糊查询 -->
+    <select id="selectUserByNameLike" resultType="User">
+        SELECT * FROM user
+        WHERE name LIKE CONCAT('%', #{name}, '%')
+    </select>
+
+    <select id="selectUserByAgeBetween" resultType="User">
+        SELECT * FROM user
+        <where>
+            <if test="minAge != null">
+                AND age &gt;= #{minAge}
+            </if>
+            <if test="maxAge != null">
+                AND age &lt;= #{maxAge}
+            </if>
+        </where>
+    </select>
+
+</mapper>

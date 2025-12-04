@@ -32,6 +32,7 @@
         <hutool.version>5.8.41</hutool.version>
         <byte-buddy-agent.version>1.17.8</byte-buddy-agent.version>
         <jackson-databind.version>2.20.1</jackson-databind.version>
+        <sa-token.version>1.44.0</sa-token.version>
     </properties>
 
     <dependencyManagement>

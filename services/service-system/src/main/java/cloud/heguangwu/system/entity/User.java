@@ -38,7 +38,7 @@ public class User {
     private String password;
     //乐观锁使用
     @Version
-    private int version; //不能用 Integer
+    private int version;
 
     private Long tenantId; //不能用基本类型long
     /* 逻辑删除，也可以在配置文件中进行配置 logic-delete-field，

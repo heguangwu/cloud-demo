@@ -1,0 +1,533 @@
+2025-12-30 17:59:12,720 INFO [service-product] [] (Version.java:21)- HV000001: Hibernate Validator 8.0.3.Final
+2025-12-30 17:59:12,750 INFO [service-product] [] (StartupInfoLogger.java:53)- Starting ProductApplication using Java 21.0.8 with PID 35220 (E:\java-workspace\spring-ws\cloud-demo\services\service-product\target\classes started by 65039 in E:\java-workspace\spring-ws\cloud-demo)
+2025-12-30 17:59:12,751 INFO [service-product] [] (SpringApplication.java:652)- No active profile set, falling back to 1 default profile: "default"
+2025-12-30 17:59:13,296 INFO [service-product] [] (LogAccessor.java:292)- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-12-30 17:59:13,310 INFO [service-product] [] (LogAccessor.java:292)- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-12-30 17:59:13,359 INFO [service-product] [] (GenericScope.java:280)- BeanFactory id=3e49beb5-efe2-3848-94d9-73350eb234fe
+2025-12-30 17:59:13,684 INFO [service-product] [] (TomcatWebServer.java:111)- Tomcat initialized with port 9800 (http)
+2025-12-30 17:59:13,692 INFO [service-product] [] (DirectJDKLog.java:168)- Initializing ProtocolHandler ["http-nio-9800"]
+2025-12-30 17:59:13,693 INFO [service-product] [] (DirectJDKLog.java:168)- Starting service [Tomcat]
+2025-12-30 17:59:13,693 INFO [service-product] [] (DirectJDKLog.java:168)- Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-12-30 17:59:13,727 INFO [service-product] [] (DirectJDKLog.java:168)- Initializing Spring embedded WebApplicationContext
+2025-12-30 17:59:13,727 INFO [service-product] [] (ServletWebServerApplicationContext.java:301)- Root WebApplicationContext: initialization completed in 953 ms
+2025-12-30 17:59:13,947 INFO [service-product] [] (SentinelWebMvcConfigurer.java:52)- [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-12-30 17:59:14,103 INFO [service-product] [] (NacosLogging.java:52)- Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-12-30 17:59:14,103 INFO [service-product] [] (NacosLogging.java:55)- Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-12-30 17:59:14,106 INFO [service-product] [] (NacosLogging.java:52)- Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-12-30 17:59:14,148 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-30 17:59:14,148 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-30 17:59:14,425 WARN [service-product] [] (LoadBalancerCacheAutoConfiguration.java:94)- Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-30 17:59:14,453 WARN [service-product] [] (SimpleFunctionRegistry.java:303)- Failed to locate function 'orderProcess' for function definition 'orderProcess'. Returning null.
+2025-12-30 17:59:14,487 INFO [service-product] [] (DefaultBinderFactory.java:363)- Creating binder: rabbit
+2025-12-30 17:59:14,487 INFO [service-product] [] (DefaultBinderFactory.java:379)- Constructing binder child context for rabbit
+2025-12-30 17:59:14,562 INFO [service-product] [] (DefaultBinderFactory.java:411)- Caching the binder: rabbit
+2025-12-30 17:59:14,564 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.orderProcess-in-0' has 1 subscriber(s).
+2025-12-30 17:59:14,688 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel errorChannel
+2025-12-30 17:59:14,692 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel orderProcess-in-0
+2025-12-30 17:59:14,694 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel orderProcess-out-0
+2025-12-30 17:59:14,696 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel nullChannel
+2025-12-30 17:59:14,698 INFO [service-product] [] (IntegrationMBeanExporter.java:676)- Registering MessageHandler _org.springframework.integration.errorLogger
+2025-12-30 17:59:14,701 INFO [service-product] [] (LogAccessor.java:174)- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-12-30 17:59:14,702 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.errorChannel' has 1 subscriber(s).
+2025-12-30 17:59:14,702 INFO [service-product] [] (LogAccessor.java:292)- started bean '_org.springframework.integration.errorLogger'
+2025-12-30 17:59:14,712 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 17:59:16,762 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.orderProcess-out-0' has 1 subscriber(s).
+2025-12-30 17:59:16,794 INFO [service-product] [] (RabbitExchangeQueueProvisioner.java:252)- declaring queue for inbound: test-topic.processor, bound to: test-topic
+2025-12-30 17:59:16,794 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 17:59:18,866 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 17:59:20,925 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 17:59:22,978 INFO [service-product] [] (LogAccessor.java:174)- Channel 'rabbit-1303659291.orderProcess-in-0.errors' has 1 subscriber(s).
+2025-12-30 17:59:22,978 INFO [service-product] [] (LogAccessor.java:174)- Channel 'rabbit-1303659291.orderProcess-in-0.errors' has 2 subscriber(s).
+2025-12-30 17:59:22,978 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 17:59:25,037 INFO [service-product] [] (AbstractMessageListenerContainer.java:1889)- Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 17:59:25,043 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 17:59:26,581 INFO [service-product] [] (ThreadPoolManager.java:54)- [ThreadPoolManager] Start destroying ThreadPool
+2025-12-30 17:59:26,581 INFO [service-product] [] (NotifyCenter.java:135)- [NotifyCenter] Start destroying Publisher
+2025-12-30 17:59:26,581 INFO [service-product] [] (HttpClientBeanHolder.java:102)- [HttpClientBeanHolder] Start destroying common HttpClient
+2025-12-30 17:59:26,581 INFO [service-product] [] (NotifyCenter.java:152)- [NotifyCenter] Completed destruction of Publisher
+2025-12-30 17:59:26,581 INFO [service-product] [] (ThreadPoolManager.java:56)- [ThreadPoolManager] Completed destruction of ThreadPool
+2025-12-30 17:59:26,582 INFO [service-product] [] (HttpClientBeanHolder.java:111)- [HttpClientBeanHolder] Completed destruction of HttpClient
+2025-12-30 17:59:26,581 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 17:59:26,581 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 17:59:26,581 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 17:59:27,077 INFO [service-product] [] (LogAccessor.java:292)- started bean 'inbound.test-topic.processor'
+2025-12-30 17:59:27,090 INFO [service-product] [] (TomcatWebServer.java:243)- Tomcat started on port 9800 (http) with context path '/'
+2025-12-30 17:59:27,108 INFO [service-product] [] (SimpleMessageListenerContainer.java:691)- Waiting for workers to finish.
+2025-12-30 17:59:27,108 INFO [service-product] [] (SimpleMessageListenerContainer.java:695)- Successfully waited for workers to finish.
+2025-12-30 17:59:27,108 INFO [service-product] [] (LogAccessor.java:292)- stopped bean 'inbound.test-topic.processor'
+2025-12-30 17:59:27,126 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel rabbit-1303659291.orderProcess-in-0.errors
+2025-12-30 17:59:27,130 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.rabbit-1303659291.orderProcess-in-0.errors' has 1 subscriber(s).
+2025-12-30 17:59:27,130 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.rabbit-1303659291.orderProcess-in-0.errors' has 0 subscriber(s).
+2025-12-30 17:59:27,142 INFO [service-product] [] (LogAccessor.java:174)- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-12-30 17:59:27,142 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.errorChannel' has 0 subscriber(s).
+2025-12-30 17:59:27,143 INFO [service-product] [] (LogAccessor.java:292)- stopped bean '_org.springframework.integration.errorLogger'
+2025-12-30 17:59:27,143 WARN [service-product] [] (AbstractApplicationContext.java:635)- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-12-30 18:00:59,834 INFO [service-product] [] (Version.java:21)- HV000001: Hibernate Validator 8.0.3.Final
+2025-12-30 18:00:59,865 INFO [service-product] [] (StartupInfoLogger.java:53)- Starting ProductApplication using Java 21.0.8 with PID 48152 (E:\java-workspace\spring-ws\cloud-demo\services\service-product\target\classes started by 65039 in E:\java-workspace\spring-ws\cloud-demo)
+2025-12-30 18:00:59,866 INFO [service-product] [] (SpringApplication.java:652)- No active profile set, falling back to 1 default profile: "default"
+2025-12-30 18:01:00,405 INFO [service-product] [] (LogAccessor.java:292)- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-12-30 18:01:00,411 INFO [service-product] [] (LogAccessor.java:292)- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-12-30 18:01:00,464 INFO [service-product] [] (GenericScope.java:280)- BeanFactory id=3e49beb5-efe2-3848-94d9-73350eb234fe
+2025-12-30 18:01:00,804 INFO [service-product] [] (TomcatWebServer.java:111)- Tomcat initialized with port 9800 (http)
+2025-12-30 18:01:00,813 INFO [service-product] [] (DirectJDKLog.java:168)- Initializing ProtocolHandler ["http-nio-9800"]
+2025-12-30 18:01:00,815 INFO [service-product] [] (DirectJDKLog.java:168)- Starting service [Tomcat]
+2025-12-30 18:01:00,815 INFO [service-product] [] (DirectJDKLog.java:168)- Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-12-30 18:01:00,855 INFO [service-product] [] (DirectJDKLog.java:168)- Initializing Spring embedded WebApplicationContext
+2025-12-30 18:01:00,856 INFO [service-product] [] (ServletWebServerApplicationContext.java:301)- Root WebApplicationContext: initialization completed in 962 ms
+2025-12-30 18:01:01,099 INFO [service-product] [] (SentinelWebMvcConfigurer.java:52)- [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-12-30 18:01:01,274 INFO [service-product] [] (NacosLogging.java:52)- Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-12-30 18:01:01,275 INFO [service-product] [] (NacosLogging.java:55)- Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-12-30 18:01:01,277 INFO [service-product] [] (NacosLogging.java:52)- Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-12-30 18:01:01,315 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-30 18:01:01,315 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-30 18:01:01,593 WARN [service-product] [] (LoadBalancerCacheAutoConfiguration.java:94)- Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-30 18:01:01,619 WARN [service-product] [] (SimpleFunctionRegistry.java:303)- Failed to locate function 'orderProcess' for function definition 'orderProcess'. Returning null.
+2025-12-30 18:01:01,653 INFO [service-product] [] (DefaultBinderFactory.java:363)- Creating binder: rabbit
+2025-12-30 18:01:01,653 INFO [service-product] [] (DefaultBinderFactory.java:379)- Constructing binder child context for rabbit
+2025-12-30 18:01:01,720 INFO [service-product] [] (DefaultBinderFactory.java:411)- Caching the binder: rabbit
+2025-12-30 18:01:01,723 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.orderProcess-in-0' has 1 subscriber(s).
+2025-12-30 18:01:01,850 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel errorChannel
+2025-12-30 18:01:01,853 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel orderProcess-in-0
+2025-12-30 18:01:01,856 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel orderProcess-out-0
+2025-12-30 18:01:01,857 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel nullChannel
+2025-12-30 18:01:01,859 INFO [service-product] [] (IntegrationMBeanExporter.java:676)- Registering MessageHandler _org.springframework.integration.errorLogger
+2025-12-30 18:01:01,863 INFO [service-product] [] (LogAccessor.java:174)- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-12-30 18:01:01,863 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.errorChannel' has 1 subscriber(s).
+2025-12-30 18:01:01,863 INFO [service-product] [] (LogAccessor.java:292)- started bean '_org.springframework.integration.errorLogger'
+2025-12-30 18:01:01,873 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:01:03,918 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.orderProcess-out-0' has 1 subscriber(s).
+2025-12-30 18:01:03,974 INFO [service-product] [] (RabbitExchangeQueueProvisioner.java:252)- declaring queue for inbound: test-topic.processor, bound to: test-topic
+2025-12-30 18:01:03,974 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:01:06,001 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:01:08,059 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:01:10,119 INFO [service-product] [] (LogAccessor.java:174)- Channel 'rabbit-1303659291.orderProcess-in-0.errors' has 1 subscriber(s).
+2025-12-30 18:01:10,119 INFO [service-product] [] (LogAccessor.java:174)- Channel 'rabbit-1303659291.orderProcess-in-0.errors' has 2 subscriber(s).
+2025-12-30 18:01:10,120 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:01:12,165 INFO [service-product] [] (AbstractMessageListenerContainer.java:1889)- Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:01:12,173 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:01:14,205 INFO [service-product] [] (LogAccessor.java:292)- started bean 'inbound.test-topic.processor'
+2025-12-30 18:01:14,208 INFO [service-product] [] (DirectJDKLog.java:168)- Starting ProtocolHandler ["http-nio-9800"]
+2025-12-30 18:01:14,223 INFO [service-product] [] (TomcatWebServer.java:243)- Tomcat started on port 9800 (http) with context path '/'
+2025-12-30 18:01:14,237 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-30 18:01:14,237 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-30 18:01:14,584 INFO [service-product] [] (AbstractAbilityControlManager.java:61)- Ready to get current node abilities...
+2025-12-30 18:01:14,585 INFO [service-product] [] (AbstractAbilityControlManager.java:89)- Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2025-12-30 18:01:14,586 INFO [service-product] [] (AbstractAbilityControlManager.java:94)- Initialize current abilities finish...
+2025-12-30 18:01:14,586 INFO [service-product] [] (NacosAbilityManagerHolder.java:85)- [AbilityControlManager] Successfully initialize AbilityControlManager
+2025-12-30 18:01:14,609 INFO [service-product] [] (NacosServiceRegistry.java:75)- nacos registry, DEFAULT_GROUP service-product,my-product 172.31.16.1:9800 register finished
+2025-12-30 18:01:14,625 INFO [service-product] [] (StartupInfoLogger.java:59)- Started ProductApplication in 15.04 seconds (process running for 15.546)
+2025-12-30 18:01:19,282 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:01:19,285 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@3f78a5ed: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:01:19,286 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:01:26,421 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:01:26,421 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@2bbf76e4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:01:26,423 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:01:33,661 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:01:33,661 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@6b541ff: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:01:33,663 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:01:40,758 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:01:40,758 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@5b5c4faf: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:01:40,759 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:01:47,887 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:01:47,887 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@3e413436: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:01:47,888 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:01:54,995 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:01:54,995 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@521a72b3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:01:54,997 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:02:02,117 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:02:02,117 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@6435b9f2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:02:02,118 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:02:09,249 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:02:09,249 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@276b4f38: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:02:09,252 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:02:16,394 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:02:16,394 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@3dda8cb7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:02:16,396 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:02:23,521 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:02:23,521 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@2f19177b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:02:23,523 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:02:30,635 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:02:30,635 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@33e126ac: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:02:30,636 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:02:37,744 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:02:37,745 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@2feb8d23: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:02:37,746 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:02:44,837 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:02:44,837 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@77045f80: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:02:44,839 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:02:51,962 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:02:51,962 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@7ceb981: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:02:51,964 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:02:59,075 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:02:59,075 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@35dc626b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:02:59,076 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:03:06,182 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:03:06,182 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@55bda27f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:03:06,184 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:03:13,302 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:03:13,304 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@3e154311: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:03:13,305 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:03:20,408 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:03:20,409 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@36b4e32e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:03:20,411 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:03:27,533 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:03:27,535 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@5332267c: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:03:27,536 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:03:34,681 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:03:34,681 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@2cb86ff5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:03:34,682 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:03:41,811 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:03:41,811 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@18bdef14: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:03:41,813 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:03:48,908 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:03:48,908 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@14c4de2b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:03:48,909 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:03:56,033 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:03:56,033 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@79e643d3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:03:56,035 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:04:03,232 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:04:03,232 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@5c8a8c63: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:04:03,234 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:04:10,354 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:04:10,354 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@718ad918: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:04:10,357 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:04:17,472 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:04:17,472 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@5aaa9bd8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:04:17,475 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:04:24,585 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:04:24,585 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@8796310: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:04:24,587 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:04:31,766 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:04:31,766 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@3d12a2: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:04:31,767 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:04:38,979 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:04:38,979 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@2cfd8187: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:04:38,981 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:04:46,100 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:04:46,100 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@24ee6b9b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:04:46,103 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:04:53,298 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:04:53,298 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@124f5f45: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:04:53,301 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:05:00,488 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:05:00,488 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@3dbeb9d8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:05:00,489 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:05:07,715 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:05:07,715 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@24175592: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:05:07,717 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:05:14,834 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:05:14,835 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@739484c3: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:05:14,835 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:05:22,011 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:05:22,012 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@31320b0b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:05:22,013 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:05:29,232 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:05:29,233 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@36c75808: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:05:29,234 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:05:36,435 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:05:36,435 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@37ab7bce: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:05:36,436 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:05:43,518 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:05:43,518 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@2ed0f3c5: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:05:43,520 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:05:50,658 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:05:50,658 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@7e60461b: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:05:50,660 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:05:57,784 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:05:57,784 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@1c97ae5a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:05:57,786 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:06:05,002 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:06:05,002 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@1da6fed8: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:06:05,004 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:06:12,164 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:06:12,165 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@3f4ee8ff: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:06:12,165 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:06:19,296 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:06:19,296 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@28371728: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:06:19,299 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:06:26,446 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:06:26,446 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@52f0b47e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:06:26,448 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:06:33,621 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:06:33,621 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@5f13a65f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:06:33,623 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:06:40,804 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:06:40,804 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@299660e7: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:06:40,806 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:06:47,864 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:06:47,864 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@30319cee: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:06:47,865 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:06:55,045 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:06:55,045 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@50c8eb7e: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:06:55,047 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:07:02,223 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:07:02,223 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@2f9ff7e4: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:07:02,224 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:07:09,334 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:07:09,334 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@55910adf: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:07:09,335 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:07:16,484 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:07:16,484 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@113ad716: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:07:16,486 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:07:23,598 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:07:23,598 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@3434a5e6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:07:23,601 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:07:30,774 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:07:30,775 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@49f4f98: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:07:30,776 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:07:37,924 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:07:37,924 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@198da5c6: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:07:37,925 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:07:45,060 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:07:45,060 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@668cce35: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:07:45,062 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:07:52,181 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:07:52,181 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@54f63967: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:07:52,182 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:07:59,301 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:07:59,301 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@75f4cc2a: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:07:59,302 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:08:06,408 WARN [service-product] [] (SimpleMessageListenerContainer.java:1601)- Consumer raised exception, processing can restart if the connection factory supports it. Exception summary: org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused: getsockopt
+2025-12-30 18:08:06,408 INFO [service-product] [] (SimpleMessageListenerContainer.java:1577)- Restarting Consumer@6ef9ab6f: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2025-12-30 18:08:06,409 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:08:06,433 INFO [service-product] [] (AbstractConnectionFactory.java:618)- Created new connection: rabbitConnectionFactory#2db3675a:63/SimpleConnection@1540a6da [delegate=amqp://admin@172.31.16.64:5672/, localPort=64672]
+2025-12-30 18:14:57,768 INFO [service-product] [] (HttpClientBeanHolder.java:102)- [HttpClientBeanHolder] Start destroying common HttpClient
+2025-12-30 18:14:57,768 INFO [service-product] [] (NotifyCenter.java:135)- [NotifyCenter] Start destroying Publisher
+2025-12-30 18:14:57,768 INFO [service-product] [] (ThreadPoolManager.java:54)- [ThreadPoolManager] Start destroying ThreadPool
+2025-12-30 18:14:57,769 INFO [service-product] [] (NotifyCenter.java:152)- [NotifyCenter] Completed destruction of Publisher
+2025-12-30 18:14:57,769 INFO [service-product] [] (ThreadPoolManager.java:56)- [ThreadPoolManager] Completed destruction of ThreadPool
+2025-12-30 18:14:57,769 INFO [service-product] [] (HttpClientBeanHolder.java:111)- [HttpClientBeanHolder] Completed destruction of HttpClient
+2025-12-30 18:14:57,769 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:14:57,769 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:14:57,769 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:14:57,769 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:14:57,769 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:14:57,772 INFO [service-product] [] (NacosServiceRegistry.java:94)- De-registering from Nacos Server now...
+2025-12-30 18:14:57,769 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:14:57,769 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:14:57,778 INFO [service-product] [] (NacosServiceRegistry.java:114)- De-registration finished.
+2025-12-30 18:14:57,781 ERROR [service-product] [] (NacosGracefulShutdownDelegate.java:79)- Error occurred while performing Nacos client graceful shutdown
+java.lang.NullPointerException: Cannot read field "sharePublisher" because "com.alibaba.nacos.common.notify.NotifyCenter.INSTANCE" is null
+	at com.alibaba.nacos.common.notify.NotifyCenter.deregisterSubscriber(NotifyCenter.java:242)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.shutdown(NamingGrpcClientProxy.java:537)
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.shutdown(NamingClientProxyDelegate.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.shutDown(NacosNamingService.java:637)
+	at com.alibaba.cloud.nacos.NacosServiceManager.nacosServiceShutDown(NacosServiceManager.java:117)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.close(NacosServiceRegistry.java:120)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:311)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.doGracefulShutdown(NacosGracefulShutdownDelegate.java:69)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.onApplicationEvent(NacosGracefulShutdownDelegate.java:64)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.onApplicationEvent(NacosGracefulShutdownDelegate.java:34)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1166)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1129)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-30 18:14:57,783 INFO [service-product] [] (GracefulShutdown.java:54)- Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-30 18:14:57,789 INFO [service-product] [] (GracefulShutdown.java:76)- Graceful shutdown complete
+2025-12-30 18:14:57,793 INFO [service-product] [] (SimpleMessageListenerContainer.java:691)- Waiting for workers to finish.
+2025-12-30 18:14:58,376 INFO [service-product] [] (SimpleMessageListenerContainer.java:695)- Successfully waited for workers to finish.
+2025-12-30 18:14:58,376 INFO [service-product] [] (LogAccessor.java:292)- stopped bean 'inbound.test-topic.processor'
+2025-12-30 18:14:58,382 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel rabbit-1303659291.orderProcess-in-0.errors
+2025-12-30 18:14:58,386 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.rabbit-1303659291.orderProcess-in-0.errors' has 1 subscriber(s).
+2025-12-30 18:14:58,387 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.rabbit-1303659291.orderProcess-in-0.errors' has 0 subscriber(s).
+2025-12-30 18:14:58,406 INFO [service-product] [] (LogAccessor.java:174)- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-12-30 18:14:58,406 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.errorChannel' has 0 subscriber(s).
+2025-12-30 18:14:58,406 INFO [service-product] [] (LogAccessor.java:292)- stopped bean '_org.springframework.integration.errorLogger'
+2025-12-30 18:14:58,409 WARN [service-product] [] (DisposableBeanAdapter.java:355)- Custom destroy method 'close' on bean with name 'nacosServiceRegistry' propagated an exception: java.lang.NullPointerException: Cannot read field "sharePublisher" because "com.alibaba.nacos.common.notify.NotifyCenter.INSTANCE" is null
+2025-12-30 18:15:00,160 INFO [service-product] [] (Version.java:21)- HV000001: Hibernate Validator 8.0.3.Final
+2025-12-30 18:15:00,188 INFO [service-product] [] (StartupInfoLogger.java:53)- Starting ProductApplication using Java 21.0.8 with PID 49736 (E:\java-workspace\spring-ws\cloud-demo\services\service-product\target\classes started by 65039 in E:\java-workspace\spring-ws\cloud-demo)
+2025-12-30 18:15:00,188 INFO [service-product] [] (SpringApplication.java:652)- No active profile set, falling back to 1 default profile: "default"
+2025-12-30 18:15:00,704 INFO [service-product] [] (LogAccessor.java:292)- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-12-30 18:15:00,708 INFO [service-product] [] (LogAccessor.java:292)- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-12-30 18:15:00,757 INFO [service-product] [] (GenericScope.java:280)- BeanFactory id=3e49beb5-efe2-3848-94d9-73350eb234fe
+2025-12-30 18:15:01,071 INFO [service-product] [] (TomcatWebServer.java:111)- Tomcat initialized with port 9800 (http)
+2025-12-30 18:15:01,081 INFO [service-product] [] (DirectJDKLog.java:168)- Initializing ProtocolHandler ["http-nio-9800"]
+2025-12-30 18:15:01,082 INFO [service-product] [] (DirectJDKLog.java:168)- Starting service [Tomcat]
+2025-12-30 18:15:01,082 INFO [service-product] [] (DirectJDKLog.java:168)- Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-12-30 18:15:01,117 INFO [service-product] [] (DirectJDKLog.java:168)- Initializing Spring embedded WebApplicationContext
+2025-12-30 18:15:01,118 INFO [service-product] [] (ServletWebServerApplicationContext.java:301)- Root WebApplicationContext: initialization completed in 906 ms
+2025-12-30 18:15:01,316 INFO [service-product] [] (SentinelWebMvcConfigurer.java:52)- [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-12-30 18:15:01,469 INFO [service-product] [] (NacosLogging.java:52)- Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-12-30 18:15:01,470 INFO [service-product] [] (NacosLogging.java:55)- Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-12-30 18:15:01,473 INFO [service-product] [] (NacosLogging.java:52)- Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-12-30 18:15:01,514 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-30 18:15:01,515 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-30 18:15:01,785 WARN [service-product] [] (LoadBalancerCacheAutoConfiguration.java:94)- Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-30 18:15:01,809 WARN [service-product] [] (SimpleFunctionRegistry.java:303)- Failed to locate function 'orderProcess' for function definition 'orderProcess'. Returning null.
+2025-12-30 18:15:01,838 INFO [service-product] [] (DefaultBinderFactory.java:363)- Creating binder: rabbit
+2025-12-30 18:15:01,839 INFO [service-product] [] (DefaultBinderFactory.java:379)- Constructing binder child context for rabbit
+2025-12-30 18:15:01,899 INFO [service-product] [] (DefaultBinderFactory.java:411)- Caching the binder: rabbit
+2025-12-30 18:15:01,901 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.orderProcess-in-0' has 1 subscriber(s).
+2025-12-30 18:15:02,009 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel errorChannel
+2025-12-30 18:15:02,012 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel orderProcess-in-0
+2025-12-30 18:15:02,014 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel orderProcess-out-0
+2025-12-30 18:15:02,015 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel nullChannel
+2025-12-30 18:15:02,017 INFO [service-product] [] (IntegrationMBeanExporter.java:676)- Registering MessageHandler _org.springframework.integration.errorLogger
+2025-12-30 18:15:02,021 INFO [service-product] [] (LogAccessor.java:174)- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-12-30 18:15:02,022 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.errorChannel' has 1 subscriber(s).
+2025-12-30 18:15:02,022 INFO [service-product] [] (LogAccessor.java:292)- started bean '_org.springframework.integration.errorLogger'
+2025-12-30 18:15:02,031 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-30 18:15:02,057 INFO [service-product] [] (AbstractConnectionFactory.java:618)- Created new connection: rabbitConnectionFactory#3e2d65e1:0/SimpleConnection@1e160a9e [delegate=amqp://admin@172.31.16.64:5672/, localPort=61739]
+2025-12-30 18:15:02,076 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.orderProcess-out-0' has 1 subscriber(s).
+2025-12-30 18:15:02,104 INFO [service-product] [] (RabbitExchangeQueueProvisioner.java:252)- declaring queue for inbound: test-topic.processor, bound to: test-topic
+2025-12-30 18:15:02,126 INFO [service-product] [] (LogAccessor.java:174)- Channel 'rabbit-1547946770.orderProcess-in-0.errors' has 1 subscriber(s).
+2025-12-30 18:15:02,127 INFO [service-product] [] (LogAccessor.java:174)- Channel 'rabbit-1547946770.orderProcess-in-0.errors' has 2 subscriber(s).
+2025-12-30 18:15:02,138 INFO [service-product] [] (LogAccessor.java:292)- started bean 'inbound.test-topic.processor'
+2025-12-30 18:15:02,139 INFO [service-product] [] (DirectJDKLog.java:168)- Starting ProtocolHandler ["http-nio-9800"]
+2025-12-30 18:15:02,150 INFO [service-product] [] (TomcatWebServer.java:243)- Tomcat started on port 9800 (http) with context path '/'
+2025-12-30 18:15:02,163 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-30 18:15:02,163 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-30 18:15:02,510 INFO [service-product] [] (AbstractAbilityControlManager.java:61)- Ready to get current node abilities...
+2025-12-30 18:15:02,511 INFO [service-product] [] (AbstractAbilityControlManager.java:89)- Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2025-12-30 18:15:02,512 INFO [service-product] [] (AbstractAbilityControlManager.java:94)- Initialize current abilities finish...
+2025-12-30 18:15:02,512 INFO [service-product] [] (NacosAbilityManagerHolder.java:85)- [AbilityControlManager] Successfully initialize AbilityControlManager
+2025-12-30 18:15:02,535 INFO [service-product] [] (NacosServiceRegistry.java:75)- nacos registry, DEFAULT_GROUP service-product 172.31.16.1:9800 register finished
+2025-12-30 18:15:02,554 INFO [service-product] [] (StartupInfoLogger.java:59)- Started ProductApplication in 2.612 seconds (process running for 3.165)
+2025-12-30 18:19:27,298 INFO [service-product] [] (DirectJDKLog.java:168)- Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-30 18:19:27,299 INFO [service-product] [] (FrameworkServlet.java:532)- Initializing Servlet 'dispatcherServlet'
+2025-12-30 18:19:27,300 INFO [service-product] [] (FrameworkServlet.java:554)- Completed initialization in 1 ms
+2025-12-30 18:19:27,390 INFO [service-product] [] (ProductController.java:26)- -------X-Token: order-8c15bfe7-34a5-498f-9987-ef0b2efc10ff
+2025-12-30 18:24:01,832 INFO [service-product] [] (NotifyCenter.java:135)- [NotifyCenter] Start destroying Publisher
+2025-12-30 18:24:01,832 INFO [service-product] [] (ThreadPoolManager.java:54)- [ThreadPoolManager] Start destroying ThreadPool
+2025-12-30 18:24:01,832 INFO [service-product] [] (HttpClientBeanHolder.java:102)- [HttpClientBeanHolder] Start destroying common HttpClient
+2025-12-30 18:24:01,832 INFO [service-product] [] (NotifyCenter.java:152)- [NotifyCenter] Completed destruction of Publisher
+2025-12-30 18:24:01,832 INFO [service-product] [] (ThreadPoolManager.java:56)- [ThreadPoolManager] Completed destruction of ThreadPool
+2025-12-30 18:24:01,832 INFO [service-product] [] (HttpClientBeanHolder.java:111)- [HttpClientBeanHolder] Completed destruction of HttpClient
+2025-12-30 18:24:01,833 INFO [service-product] [] (NacosServiceRegistry.java:94)- De-registering from Nacos Server now...
+2025-12-30 18:24:01,832 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:24:01,832 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:24:01,832 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:24:01,832 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:24:01,832 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:24:01,832 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:24:01,832 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-30 18:24:01,838 INFO [service-product] [] (NacosServiceRegistry.java:114)- De-registration finished.
+2025-12-30 18:24:01,841 ERROR [service-product] [] (NacosGracefulShutdownDelegate.java:79)- Error occurred while performing Nacos client graceful shutdown
+java.lang.NullPointerException: Cannot read field "sharePublisher" because "com.alibaba.nacos.common.notify.NotifyCenter.INSTANCE" is null
+	at com.alibaba.nacos.common.notify.NotifyCenter.deregisterSubscriber(NotifyCenter.java:242)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.shutdown(NamingGrpcClientProxy.java:537)
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.shutdown(NamingClientProxyDelegate.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.shutDown(NacosNamingService.java:637)
+	at com.alibaba.cloud.nacos.NacosServiceManager.nacosServiceShutDown(NacosServiceManager.java:117)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.close(NacosServiceRegistry.java:120)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:311)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.doGracefulShutdown(NacosGracefulShutdownDelegate.java:69)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.onApplicationEvent(NacosGracefulShutdownDelegate.java:64)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.onApplicationEvent(NacosGracefulShutdownDelegate.java:34)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1166)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1129)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-30 18:24:01,844 INFO [service-product] [] (GracefulShutdown.java:54)- Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-30 18:24:01,852 INFO [service-product] [] (GracefulShutdown.java:76)- Graceful shutdown complete
+2025-12-30 18:24:01,857 INFO [service-product] [] (SimpleMessageListenerContainer.java:691)- Waiting for workers to finish.
+2025-12-30 18:24:02,633 INFO [service-product] [] (SimpleMessageListenerContainer.java:695)- Successfully waited for workers to finish.
+2025-12-30 18:24:02,634 INFO [service-product] [] (LogAccessor.java:292)- stopped bean 'inbound.test-topic.processor'
+2025-12-30 18:24:02,641 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel rabbit-1547946770.orderProcess-in-0.errors
+2025-12-30 18:24:02,645 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.rabbit-1547946770.orderProcess-in-0.errors' has 1 subscriber(s).
+2025-12-30 18:24:02,650 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.rabbit-1547946770.orderProcess-in-0.errors' has 0 subscriber(s).
+2025-12-30 18:24:02,666 INFO [service-product] [] (LogAccessor.java:174)- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-12-30 18:24:02,666 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.errorChannel' has 0 subscriber(s).
+2025-12-30 18:24:02,666 INFO [service-product] [] (LogAccessor.java:292)- stopped bean '_org.springframework.integration.errorLogger'
+2025-12-30 18:24:02,668 WARN [service-product] [] (DisposableBeanAdapter.java:355)- Custom destroy method 'close' on bean with name 'nacosServiceRegistry' propagated an exception: java.lang.NullPointerException: Cannot read field "sharePublisher" because "com.alibaba.nacos.common.notify.NotifyCenter.INSTANCE" is null

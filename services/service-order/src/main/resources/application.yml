@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: service-order
@@ -11,10 +12,19 @@ spring:
       # 配置中心地址
       config:
         server-addr: 172.31.16.64:8848
-        username: meetyou
-        password: meetyou123
-        namespace: ${spring.profiles.active:dev}
 
+    # 消费者相关配置
+    stream:
+      bindings:
+        orderConsumerReceive-in-0:
+          destination: order-topic
+          group: consumer
+  # rabbitmq 服务配置
+  rabbitmq:
+    host: 172.31.16.64
+    port: 5672
+    username: admin
+    password: admin123
 server:
   port: 8001
 
@@ -36,6 +46,7 @@ spring:
     # nacos 上的配置文件名
     import:
       - nacos:service-order.yml?refreshEnabled=true&group=order
+
 
 # 生产环境配置文件
 ---

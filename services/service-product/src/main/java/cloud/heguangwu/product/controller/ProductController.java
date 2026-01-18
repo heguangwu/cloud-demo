@@ -5,6 +5,7 @@ import cloud.heguangwu.product.service.ProductService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,11 +17,20 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
+    @Autowired
+    private StreamBridge streamBridge;
 
     @GetMapping("/product/{id}")
     public Product product(@PathVariable("id") Long productId, HttpServletRequest request) {
         String token = request.getHeader("X-Token");
         log.info("-------X-Token: {}", token);
         return productService.getProductById(productId);
+    }
+
+    @GetMapping("/product/mq/{value}")
+    public String values(@PathVariable String value) {
+        log.info("---> PRODUCT ----->:  {} ", value);
+        streamBridge.send("order-topic", value);  //test-topic
+        return "success";
     }
 }

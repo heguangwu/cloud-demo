@@ -1,6 +1,7 @@
 package cloud.heguangwu.order.service.impl;
 
 import cloud.heguangwu.order.Order;
+import cloud.heguangwu.order.annotation.MyLog;
 import cloud.heguangwu.order.feign.ProductFeign;
 import cloud.heguangwu.order.service.OrderService;
 import cloud.heguangwu.product.Product;
@@ -20,6 +21,7 @@ public class OrderServiceImpl implements OrderService {
         this.productFeign = productFeign;
     }
 
+    @MyLog(desc="创建订单", type="INSERT")
     @Override
     public Order createOrder(Long productId, Long userId) {
         //调用Feign完成远程调用

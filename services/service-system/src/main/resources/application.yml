@@ -4,7 +4,8 @@ spring:
     name: system
   # 数据库相关配置
   datasource:
-    url: jdbc:mysql://172.31.16.64/mydb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    # rewriteBatchedStatements 会导致saveBatch异常
+    url: jdbc:mysql://172.31.16.64/mydb?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&rewriteBatchedStatements=true
     username: test
     password: test123
     driver-class-name: com.mysql.cj.jdbc.Driver

@@ -1,0 +1,267 @@
+2025-12-11 16:56:37,467 INFO [service-product] [] (Version.java:21)- HV000001: Hibernate Validator 8.0.3.Final
+2025-12-11 16:56:37,497 INFO [service-product] [] (StartupInfoLogger.java:53)- Starting ProductApplication using Java 21.0.8 with PID 30464 (E:\java-workspace\spring-ws\cloud-demo\services\service-product\target\classes started by 65039 in E:\java-workspace\spring-ws\cloud-demo)
+2025-12-11 16:56:37,498 INFO [service-product] [] (SpringApplication.java:652)- No active profile set, falling back to 1 default profile: "default"
+2025-12-11 16:56:37,993 INFO [service-product] [] (LogAccessor.java:292)- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-12-11 16:56:38,001 INFO [service-product] [] (LogAccessor.java:292)- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-12-11 16:56:38,060 INFO [service-product] [] (GenericScope.java:280)- BeanFactory id=663350be-0ff9-39ad-8bb3-e7c202200b8c
+2025-12-11 16:56:38,366 INFO [service-product] [] (TomcatWebServer.java:111)- Tomcat initialized with port 9800 (http)
+2025-12-11 16:56:38,375 INFO [service-product] [] (DirectJDKLog.java:168)- Initializing ProtocolHandler ["http-nio-9800"]
+2025-12-11 16:56:38,376 INFO [service-product] [] (DirectJDKLog.java:168)- Starting service [Tomcat]
+2025-12-11 16:56:38,376 INFO [service-product] [] (DirectJDKLog.java:168)- Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-12-11 16:56:38,412 INFO [service-product] [] (DirectJDKLog.java:168)- Initializing Spring embedded WebApplicationContext
+2025-12-11 16:56:38,412 INFO [service-product] [] (ServletWebServerApplicationContext.java:301)- Root WebApplicationContext: initialization completed in 889 ms
+2025-12-11 16:56:38,610 INFO [service-product] [] (SentinelWebMvcConfigurer.java:52)- [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-12-11 16:56:38,760 INFO [service-product] [] (NacosLogging.java:52)- Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-12-11 16:56:38,761 INFO [service-product] [] (NacosLogging.java:55)- Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-12-11 16:56:38,766 INFO [service-product] [] (NacosLogging.java:52)- Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-12-11 16:56:38,802 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-11 16:56:38,802 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-11 16:56:39,056 WARN [service-product] [] (LoadBalancerCacheAutoConfiguration.java:94)- Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-11 16:56:39,084 WARN [service-product] [] (SimpleFunctionRegistry.java:303)- Failed to locate function 'orderProcess' for function definition 'orderProcess'. Returning null.
+2025-12-11 16:56:39,116 INFO [service-product] [] (DefaultBinderFactory.java:363)- Creating binder: rabbit
+2025-12-11 16:56:39,116 INFO [service-product] [] (DefaultBinderFactory.java:379)- Constructing binder child context for rabbit
+2025-12-11 16:56:39,179 INFO [service-product] [] (DefaultBinderFactory.java:411)- Caching the binder: rabbit
+2025-12-11 16:56:39,181 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.orderProcess-in-0' has 1 subscriber(s).
+2025-12-11 16:56:39,287 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel errorChannel
+2025-12-11 16:56:39,290 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel orderProcess-in-0
+2025-12-11 16:56:39,292 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel orderProcess-out-0
+2025-12-11 16:56:39,293 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel nullChannel
+2025-12-11 16:56:39,296 INFO [service-product] [] (IntegrationMBeanExporter.java:676)- Registering MessageHandler _org.springframework.integration.errorLogger
+2025-12-11 16:56:39,299 INFO [service-product] [] (LogAccessor.java:174)- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-12-11 16:56:39,300 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.errorChannel' has 1 subscriber(s).
+2025-12-11 16:56:39,300 INFO [service-product] [] (LogAccessor.java:292)- started bean '_org.springframework.integration.errorLogger'
+2025-12-11 16:56:39,308 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-11 16:56:39,331 INFO [service-product] [] (AbstractConnectionFactory.java:618)- Created new connection: rabbitConnectionFactory#1987807b:0/SimpleConnection@5b31a9e3 [delegate=amqp://admin@172.31.16.64:5672/, localPort=61660]
+2025-12-11 16:56:39,359 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.orderProcess-out-0' has 1 subscriber(s).
+2025-12-11 16:56:39,389 INFO [service-product] [] (RabbitExchangeQueueProvisioner.java:252)- declaring queue for inbound: test-topic.processor, bound to: test-topic
+2025-12-11 16:56:39,410 INFO [service-product] [] (LogAccessor.java:174)- Channel 'rabbit-972822462.orderProcess-in-0.errors' has 1 subscriber(s).
+2025-12-11 16:56:39,410 INFO [service-product] [] (LogAccessor.java:174)- Channel 'rabbit-972822462.orderProcess-in-0.errors' has 2 subscriber(s).
+2025-12-11 16:56:39,421 INFO [service-product] [] (LogAccessor.java:292)- started bean 'inbound.test-topic.processor'
+2025-12-11 16:56:39,422 INFO [service-product] [] (DirectJDKLog.java:168)- Starting ProtocolHandler ["http-nio-9800"]
+2025-12-11 16:56:39,433 INFO [service-product] [] (Producer.java:15)- 发送队列数据：AGGGGG
+2025-12-11 16:56:39,434 INFO [service-product] [] (TomcatWebServer.java:243)- Tomcat started on port 9800 (http) with context path '/'
+2025-12-11 16:56:39,435 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-11 16:56:39,439 INFO [service-product] [] (AbstractConnectionFactory.java:618)- Created new connection: rabbitConnectionFactory.publisher#49a4e9fa:0/SimpleConnection@d37e72b [delegate=amqp://admin@172.31.16.64:5672/, localPort=61661]
+2025-12-11 16:56:39,449 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-11 16:56:39,449 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-11 16:56:39,782 INFO [service-product] [] (AbstractAbilityControlManager.java:61)- Ready to get current node abilities...
+2025-12-11 16:56:39,783 INFO [service-product] [] (AbstractAbilityControlManager.java:89)- Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2025-12-11 16:56:39,784 INFO [service-product] [] (AbstractAbilityControlManager.java:94)- Initialize current abilities finish...
+2025-12-11 16:56:39,784 INFO [service-product] [] (NacosAbilityManagerHolder.java:85)- [AbilityControlManager] Successfully initialize AbilityControlManager
+2025-12-11 16:56:39,808 INFO [service-product] [] (NacosServiceRegistry.java:75)- nacos registry, DEFAULT_GROUP service-product 172.31.16.1:9800 register finished
+2025-12-11 16:56:39,827 INFO [service-product] [] (StartupInfoLogger.java:59)- Started ProductApplication in 2.573 seconds (process running for 3.094)
+2025-12-11 16:57:03,017 INFO [service-product] [] (HttpClientBeanHolder.java:102)- [HttpClientBeanHolder] Start destroying common HttpClient
+2025-12-11 16:57:03,017 INFO [service-product] [] (ThreadPoolManager.java:54)- [ThreadPoolManager] Start destroying ThreadPool
+2025-12-11 16:57:03,016 INFO [service-product] [] (NotifyCenter.java:135)- [NotifyCenter] Start destroying Publisher
+2025-12-11 16:57:03,017 INFO [service-product] [] (NotifyCenter.java:152)- [NotifyCenter] Completed destruction of Publisher
+2025-12-11 16:57:03,017 INFO [service-product] [] (ThreadPoolManager.java:56)- [ThreadPoolManager] Completed destruction of ThreadPool
+2025-12-11 16:57:03,018 INFO [service-product] [] (HttpClientBeanHolder.java:111)- [HttpClientBeanHolder] Completed destruction of HttpClient
+2025-12-11 16:57:03,018 INFO [service-product] [] (NacosServiceRegistry.java:94)- De-registering from Nacos Server now...
+2025-12-11 16:57:03,017 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 16:57:03,017 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 16:57:03,017 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 16:57:03,017 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 16:57:03,017 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 16:57:03,017 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 16:57:03,033 INFO [service-product] [] (NacosServiceRegistry.java:114)- De-registration finished.
+2025-12-11 16:57:03,039 ERROR [service-product] [] (NacosGracefulShutdownDelegate.java:79)- Error occurred while performing Nacos client graceful shutdown
+java.lang.NullPointerException: Cannot read field "sharePublisher" because "com.alibaba.nacos.common.notify.NotifyCenter.INSTANCE" is null
+	at com.alibaba.nacos.common.notify.NotifyCenter.deregisterSubscriber(NotifyCenter.java:242)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.shutdown(NamingGrpcClientProxy.java:537)
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.shutdown(NamingClientProxyDelegate.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.shutDown(NacosNamingService.java:637)
+	at com.alibaba.cloud.nacos.NacosServiceManager.nacosServiceShutDown(NacosServiceManager.java:117)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.close(NacosServiceRegistry.java:120)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:311)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.doGracefulShutdown(NacosGracefulShutdownDelegate.java:69)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.onApplicationEvent(NacosGracefulShutdownDelegate.java:64)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.onApplicationEvent(NacosGracefulShutdownDelegate.java:34)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1166)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1129)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-11 16:57:03,043 INFO [service-product] [] (GracefulShutdown.java:54)- Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 16:57:03,049 INFO [service-product] [] (GracefulShutdown.java:76)- Graceful shutdown complete
+2025-12-11 16:57:03,053 INFO [service-product] [] (SimpleMessageListenerContainer.java:691)- Waiting for workers to finish.
+2025-12-11 16:57:03,728 INFO [service-product] [] (SimpleMessageListenerContainer.java:695)- Successfully waited for workers to finish.
+2025-12-11 16:57:03,729 INFO [service-product] [] (LogAccessor.java:292)- stopped bean 'inbound.test-topic.processor'
+2025-12-11 16:57:03,733 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel rabbit-972822462.orderProcess-in-0.errors
+2025-12-11 16:57:03,737 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.rabbit-972822462.orderProcess-in-0.errors' has 1 subscriber(s).
+2025-12-11 16:57:03,737 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.rabbit-972822462.orderProcess-in-0.errors' has 0 subscriber(s).
+2025-12-11 16:57:03,755 INFO [service-product] [] (LogAccessor.java:174)- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-12-11 16:57:03,756 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.errorChannel' has 0 subscriber(s).
+2025-12-11 16:57:03,757 INFO [service-product] [] (LogAccessor.java:292)- stopped bean '_org.springframework.integration.errorLogger'
+2025-12-11 16:57:03,758 WARN [service-product] [] (DisposableBeanAdapter.java:355)- Custom destroy method 'close' on bean with name 'nacosServiceRegistry' propagated an exception: java.lang.NullPointerException: Cannot read field "sharePublisher" because "com.alibaba.nacos.common.notify.NotifyCenter.INSTANCE" is null
+2025-12-11 17:01:09,168 INFO [service-product] [] (Version.java:21)- HV000001: Hibernate Validator 8.0.3.Final
+2025-12-11 17:01:09,197 INFO [service-product] [] (StartupInfoLogger.java:53)- Starting ProductApplication using Java 21.0.8 with PID 29528 (E:\java-workspace\spring-ws\cloud-demo\services\service-product\target\classes started by 65039 in E:\java-workspace\spring-ws\cloud-demo)
+2025-12-11 17:01:09,198 INFO [service-product] [] (SpringApplication.java:652)- No active profile set, falling back to 1 default profile: "default"
+2025-12-11 17:01:09,722 INFO [service-product] [] (LogAccessor.java:292)- No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-12-11 17:01:09,727 INFO [service-product] [] (LogAccessor.java:292)- No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-12-11 17:01:09,778 INFO [service-product] [] (GenericScope.java:280)- BeanFactory id=3e49beb5-efe2-3848-94d9-73350eb234fe
+2025-12-11 17:01:10,087 INFO [service-product] [] (TomcatWebServer.java:111)- Tomcat initialized with port 9800 (http)
+2025-12-11 17:01:10,095 INFO [service-product] [] (DirectJDKLog.java:168)- Initializing ProtocolHandler ["http-nio-9800"]
+2025-12-11 17:01:10,096 INFO [service-product] [] (DirectJDKLog.java:168)- Starting service [Tomcat]
+2025-12-11 17:01:10,096 INFO [service-product] [] (DirectJDKLog.java:168)- Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-12-11 17:01:10,139 INFO [service-product] [] (DirectJDKLog.java:168)- Initializing Spring embedded WebApplicationContext
+2025-12-11 17:01:10,140 INFO [service-product] [] (ServletWebServerApplicationContext.java:301)- Root WebApplicationContext: initialization completed in 916 ms
+2025-12-11 17:01:10,347 INFO [service-product] [] (SentinelWebMvcConfigurer.java:52)- [Sentinel Starter] register SentinelWebInterceptor with urlPatterns: [/**].
+2025-12-11 17:01:10,500 INFO [service-product] [] (NacosLogging.java:52)- Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapterBuilder
+2025-12-11 17:01:10,508 INFO [service-product] [] (NacosLogging.java:55)- Nacos Logging Adapter: com.alibaba.nacos.logger.adapter.logback14.LogbackNacosLoggingAdapter match ch.qos.logback.classic.Logger success.
+2025-12-11 17:01:10,511 INFO [service-product] [] (NacosLogging.java:52)- Nacos Logging Adapter Builder: com.alibaba.nacos.logger.adapter.log4j2.Log4j2NacosLoggingAdapterBuilder
+2025-12-11 17:01:10,548 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-11 17:01:10,549 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-11 17:01:10,812 WARN [service-product] [] (LoadBalancerCacheAutoConfiguration.java:94)- Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-12-11 17:01:10,837 WARN [service-product] [] (SimpleFunctionRegistry.java:303)- Failed to locate function 'orderProcess' for function definition 'orderProcess'. Returning null.
+2025-12-11 17:01:10,868 INFO [service-product] [] (DefaultBinderFactory.java:363)- Creating binder: rabbit
+2025-12-11 17:01:10,868 INFO [service-product] [] (DefaultBinderFactory.java:379)- Constructing binder child context for rabbit
+2025-12-11 17:01:10,933 INFO [service-product] [] (DefaultBinderFactory.java:411)- Caching the binder: rabbit
+2025-12-11 17:01:10,936 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.orderProcess-in-0' has 1 subscriber(s).
+2025-12-11 17:01:11,047 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel errorChannel
+2025-12-11 17:01:11,050 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel orderProcess-in-0
+2025-12-11 17:01:11,052 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel orderProcess-out-0
+2025-12-11 17:01:11,054 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel nullChannel
+2025-12-11 17:01:11,056 INFO [service-product] [] (IntegrationMBeanExporter.java:676)- Registering MessageHandler _org.springframework.integration.errorLogger
+2025-12-11 17:01:11,060 INFO [service-product] [] (LogAccessor.java:174)- Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-12-11 17:01:11,060 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.errorChannel' has 1 subscriber(s).
+2025-12-11 17:01:11,060 INFO [service-product] [] (LogAccessor.java:292)- started bean '_org.springframework.integration.errorLogger'
+2025-12-11 17:01:11,069 INFO [service-product] [] (AbstractConnectionFactory.java:676)- Attempting to connect to: [172.31.16.64:5672]
+2025-12-11 17:01:11,101 INFO [service-product] [] (AbstractConnectionFactory.java:618)- Created new connection: rabbitConnectionFactory#5f9ebd5a:0/SimpleConnection@7d4b32d1 [delegate=amqp://admin@172.31.16.64:5672/, localPort=49726]
+2025-12-11 17:01:11,120 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.orderProcess-out-0' has 1 subscriber(s).
+2025-12-11 17:01:11,150 INFO [service-product] [] (RabbitExchangeQueueProvisioner.java:252)- declaring queue for inbound: test-topic.processor, bound to: test-topic
+2025-12-11 17:01:11,171 INFO [service-product] [] (LogAccessor.java:174)- Channel 'rabbit-461905695.orderProcess-in-0.errors' has 1 subscriber(s).
+2025-12-11 17:01:11,171 INFO [service-product] [] (LogAccessor.java:174)- Channel 'rabbit-461905695.orderProcess-in-0.errors' has 2 subscriber(s).
+2025-12-11 17:01:11,182 INFO [service-product] [] (LogAccessor.java:292)- started bean 'inbound.test-topic.processor'
+2025-12-11 17:01:11,183 INFO [service-product] [] (DirectJDKLog.java:168)- Starting ProtocolHandler ["http-nio-9800"]
+2025-12-11 17:01:11,194 INFO [service-product] [] (TomcatWebServer.java:243)- Tomcat started on port 9800 (http) with context path '/'
+2025-12-11 17:01:11,208 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2025-12-11 17:01:11,208 INFO [service-product] [] (ClientAuthPluginManager.java:56)- [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2025-12-11 17:01:11,548 INFO [service-product] [] (AbstractAbilityControlManager.java:61)- Ready to get current node abilities...
+2025-12-11 17:01:11,550 INFO [service-product] [] (AbstractAbilityControlManager.java:89)- Ready to initialize current node abilities, support modes: [SDK_CLIENT]
+2025-12-11 17:01:11,550 INFO [service-product] [] (AbstractAbilityControlManager.java:94)- Initialize current abilities finish...
+2025-12-11 17:01:11,551 INFO [service-product] [] (NacosAbilityManagerHolder.java:85)- [AbilityControlManager] Successfully initialize AbilityControlManager
+2025-12-11 17:01:11,577 INFO [service-product] [] (NacosServiceRegistry.java:75)- nacos registry, DEFAULT_GROUP service-product 172.31.16.1:9800 register finished
+2025-12-11 17:01:11,594 INFO [service-product] [] (StartupInfoLogger.java:59)- Started ProductApplication in 2.653 seconds (process running for 3.144)
+2025-12-11 18:05:12,805 INFO [service-product] [] (HttpClientBeanHolder.java:102)- [HttpClientBeanHolder] Start destroying common HttpClient
+2025-12-11 18:05:12,805 INFO [service-product] [] (NotifyCenter.java:135)- [NotifyCenter] Start destroying Publisher
+2025-12-11 18:05:12,805 INFO [service-product] [] (ThreadPoolManager.java:54)- [ThreadPoolManager] Start destroying ThreadPool
+2025-12-11 18:05:12,806 INFO [service-product] [] (NotifyCenter.java:152)- [NotifyCenter] Completed destruction of Publisher
+2025-12-11 18:05:12,806 INFO [service-product] [] (ThreadPoolManager.java:56)- [ThreadPoolManager] Completed destruction of ThreadPool
+2025-12-11 18:05:12,806 INFO [service-product] [] (HttpClientBeanHolder.java:111)- [HttpClientBeanHolder] Completed destruction of HttpClient
+2025-12-11 18:05:12,807 INFO [service-product] [] (NacosServiceRegistry.java:94)- De-registering from Nacos Server now...
+2025-12-11 18:05:12,806 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 18:05:12,806 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 18:05:12,806 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 18:05:12,806 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 18:05:12,806 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 18:05:12,806 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 18:05:12,806 ERROR [service-product] [] (DefaultPublisher.java:116)- Event listener exception : 
+java.lang.InterruptedException: null
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1727)
+	at java.base/java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:420)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.openEventHandler(DefaultPublisher.java:111)
+	at com.alibaba.nacos.common.notify.DefaultPublisher.run(DefaultPublisher.java:95)
+2025-12-11 18:05:12,824 INFO [service-product] [] (NacosServiceRegistry.java:114)- De-registration finished.
+2025-12-11 18:05:12,828 ERROR [service-product] [] (NacosGracefulShutdownDelegate.java:79)- Error occurred while performing Nacos client graceful shutdown
+java.lang.NullPointerException: Cannot read field "sharePublisher" because "com.alibaba.nacos.common.notify.NotifyCenter.INSTANCE" is null
+	at com.alibaba.nacos.common.notify.NotifyCenter.deregisterSubscriber(NotifyCenter.java:242)
+	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.shutdown(NamingGrpcClientProxy.java:537)
+	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.shutdown(NamingClientProxyDelegate.java:212)
+	at com.alibaba.nacos.client.naming.NacosNamingService.shutDown(NacosNamingService.java:637)
+	at com.alibaba.cloud.nacos.NacosServiceManager.nacosServiceShutDown(NacosServiceManager.java:117)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.close(NacosServiceRegistry.java:120)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:311)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.doGracefulShutdown(NacosGracefulShutdownDelegate.java:69)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.onApplicationEvent(NacosGracefulShutdownDelegate.java:64)
+	at com.alibaba.cloud.nacos.registry.NacosGracefulShutdownDelegate.onApplicationEvent(NacosGracefulShutdownDelegate.java:34)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:454)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:387)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1166)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:179)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1129)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:147)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:116)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2025-12-11 18:05:12,831 INFO [service-product] [] (GracefulShutdown.java:54)- Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-11 18:05:12,839 INFO [service-product] [] (GracefulShutdown.java:76)- Graceful shutdown complete
+2025-12-11 18:05:12,845 INFO [service-product] [] (SimpleMessageListenerContainer.java:691)- Waiting for workers to finish.
+2025-12-11 18:05:13,000 INFO [service-product] [] (SimpleMessageListenerContainer.java:695)- Successfully waited for workers to finish.
+2025-12-11 18:05:13,000 INFO [service-product] [] (LogAccessor.java:292)- stopped bean 'inbound.test-topic.processor'
+2025-12-11 18:05:13,006 INFO [service-product] [] (IntegrationMBeanExporter.java:654)- Registering MessageChannel rabbit-461905695.orderProcess-in-0.errors
+2025-12-11 18:05:13,010 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.rabbit-461905695.orderProcess-in-0.errors' has 1 subscriber(s).
+2025-12-11 18:05:13,011 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.rabbit-461905695.orderProcess-in-0.errors' has 0 subscriber(s).
+2025-12-11 18:05:13,028 INFO [service-product] [] (LogAccessor.java:174)- Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-12-11 18:05:13,028 INFO [service-product] [] (LogAccessor.java:174)- Channel 'service-product.errorChannel' has 0 subscriber(s).
+2025-12-11 18:05:13,029 INFO [service-product] [] (LogAccessor.java:292)- stopped bean '_org.springframework.integration.errorLogger'
+2025-12-11 18:05:13,030 WARN [service-product] [] (DisposableBeanAdapter.java:355)- Custom destroy method 'close' on bean with name 'nacosServiceRegistry' propagated an exception: java.lang.NullPointerException: Cannot read field "sharePublisher" because "com.alibaba.nacos.common.notify.NotifyCenter.INSTANCE" is null

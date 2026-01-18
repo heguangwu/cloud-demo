@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -19,6 +20,7 @@ import java.util.concurrent.Executors;
 @EnableFeignClients  //开启openfeign
 @EnableDiscoveryClient
 @SpringBootApplication
+@EnableScheduling
 public class OrderApplication {
 
     public static void main(String[] args) {
